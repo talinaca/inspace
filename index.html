@@ -60,15 +60,11 @@
             font-size: 1.2em;
         }
 
-        .pink-text {
-            color: pink;
-        }
-
         /* Positioning for additional elements */
         .bottom-left {
             position: absolute;
             bottom: 20px;
-            left: 30px;
+            left: 20px;
             z-index: 2; /* Ensure it's above the video background */
         }
 
@@ -84,6 +80,11 @@
             color: white;
             padding: 10px;
             border-radius: 5px;
+        }
+
+        /* Pink text styling */
+        .pink-text {
+            color: pink;
         }
     </style>
 </head>
@@ -102,7 +103,7 @@
     <div class="bottom-left">
         <img src="200.gif" alt="Jan 16th, 2024">
         <div class="text-box">
-            <p>This is some additional text next to the GIF.</p>
+            <p class="pink-text">meep</p>
         </div>
     </div>
     <div class="bottom-right">
@@ -111,6 +112,6 @@
             Your browser does not support the audio element.
         </audio>
     </div>
-    <p class="pink-text">meep</p>
 </body>
 </html>
+
