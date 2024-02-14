@@ -71,12 +71,14 @@
             position: absolute;
             bottom: 20px;
             left: 20px;
+            z-index: 1; /* Ensure GIF and text box are above the video background */
         }
 
         .bottom-right {
             position: absolute;
             bottom: 20px;
             right: 20px;
+            z-index: 1; /* Ensure audio player is above the video background */
         }
 
         .text-box {
@@ -98,9 +100,9 @@
         <h1 class="neon-title">Welcome to inspace!</h1>
         <p>hi this is a page dedicated to moments where my girlfriend and i were in space. "but you're not in space?" maybe not to you, but to us these moments were driven by forces that keep balance in the universe. so actually, you should be thanking us for being such cosmic explorers. not to worry though, these forces will never cease to exist for our love is eternal ❤️ </p>
         <div class="bottom-left">
-            <img src="200.gif" alt="Jan 16th, 2024">
+            <img src="IMG_2551.jpg" alt="Jan 16th, 2024">
             <div class="text-box">
-                <p>This is some additional text next to the GIF.</p>
+                <p>This is some additional text next to the image.</p>
             </div>
         </div>
         <div class="bottom-right">
