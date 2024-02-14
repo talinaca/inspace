@@ -43,26 +43,25 @@
             padding: 20px;
         }
 
-        /* Additional styling for content */
-        h1 {
+        /* Neon text effect */
+        h1.neon-title {
             font-size: 2em;
             margin-top: 0; /* Add margin-top to prevent cropping */
+            background: linear-gradient(90deg, #f6ff00, #d400ff, #00ffdb);
+            background-size: 200%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: glowing 2s linear infinite;
         }
 
-        p {
-            font-size: 1.2em;
-        }
-
-        .pink-text {
-            color: pink; /* Set text color to pink */
-        }
-
-        /* Adjust image size */
-        img {
-            max-width: 80%; /* Set maximum width to 80% of the container */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Ensure image is centered */
-            margin: 0 auto; /* Center the image horizontally */
+        @keyframes glowing {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 200%;
+            }
         }
     </style>
 </head>
@@ -74,7 +73,7 @@
         </video>
     </div>
     <div class="content">
-        <h1>lovies :3 🐙❤️</h1>
+        <h1 class="neon-title">lovies :3 🐙❤️</h1>
         <p>hi this is a page dedicated to my gf bc im in love w my gf</p>
         <img src="IMG_2551.jpg" alt="March 4th, 2023">
         <audio controls autoplay>
@@ -86,3 +85,4 @@
     </div>
 </body>
 </html>
+
