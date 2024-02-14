@@ -52,6 +52,16 @@
             animation: glowing 2s linear infinite;
         }
 
+        /* Vendor prefixes for animation */
+        @-webkit-keyframes glowing {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 200%;
+            }
+        }
+
         @keyframes glowing {
             0% {
                 background-position: 0%;
@@ -61,44 +71,9 @@
             }
         }
 
-        /* Adjust image size */
-        img.center-image {
-            max-width: 40%; /* Smaller image size */
-            height: auto;
-            display: block;
-            margin: 20px auto; /* Center the image */
-        }
-
-        /* Additional styling for content */
-        p {
-            font-size: 1.2em;
-        }
-
-        /* Positioning for additional elements */
-        .bottom-left {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            z-index: 2; /* Ensure it's above the video background */
-        }
-
-        .bottom-right {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            z-index: 2; /* Ensure it's above the video background */
-        }
-
-        .text-box {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        /* Pink text styling */
-        .pink-text {
-            color: pink;
+        /* Fallback neon style */
+        h1.neon-title {
+            text-shadow: 0 0 5px #f6ff00, 0 0 10px #d400ff, 0 0 15px #00ffdb;
         }
     </style>
 </head>
