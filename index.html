@@ -41,11 +41,11 @@
         }
 
         /* Neon text effect */
-        h1.neon-title {
-            font-size: 2em;
+        .neon-title {
+            font-size: 4vw; /* Responsive font size */
             margin-top: 0;
             color: #fff; /* Fallback color */
-            background: linear-gradient(90deg, #ff80ed, #ffadad, #ffcc5c);
+            background: linear-gradient(90deg, #ff80ed, #ffadad, #ffcc5c); /* Pink, Orange, Dark Blue */
             background-size: 200%;
             -webkit-background-clip: text;
             background-clip: text;
@@ -72,13 +72,13 @@
         }
 
         /* Fallback neon style */
-        h1.neon-title {
-            text-shadow: 0 0 5px #f6ff00, 0 0 10px #d400ff, 0 0 15px #00ffdb;
+        .neon-title {
+            text-shadow: 0 0 5px #ff80ed, 0 0 10px #ffadad, 0 0 15px #ffcc5c;
         }
 
         /* Smaller center image */
-        img.center-image {
-            max-width: 40%; /* Adjust the size as needed */
+        .center-image {
+            max-width: 60%; /* Adjust the size as needed */
             height: auto;
             display: block;
             margin: 20px auto; /* Center the image */
@@ -87,15 +87,15 @@
         /* Positioning for bottom left and bottom right */
         .bottom-left {
             position: absolute;
-            bottom: 20px;
-            left: 35px;
+            bottom: 5vw; /* Responsive distance from bottom */
+            left: 5vw; /* Responsive distance from left */
             z-index: 2; /* Ensure it's above the video background */
         }
 
         .bottom-right {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
+            bottom: 5vw; /* Responsive distance from bottom */
+            right: 5vw; /* Responsive distance from right */
             z-index: 2; /* Ensure it's above the video background */
         }
 
@@ -110,6 +110,11 @@
         /* Pink text styling */
         .pink-text {
             color: pink;
+        }
+
+        /* Responsive text size for paragraphs */
+        p {
+            font-size: 2vw;
         }
     </style>
 </head>
@@ -128,7 +133,7 @@
     <div class="bottom-left">
         <img src="200.gif" alt="Jan 16th, 2024">
         <div class="text-box">
-            <p class="pink-text">meep</p>
+            <p class="pink-text">This is some additional text next to the GIF.</p>
         </div>
     </div>
     <div class="bottom-right">
