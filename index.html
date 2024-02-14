@@ -78,10 +78,38 @@
 
         /* Smaller center image */
         img.center-image {
-            max-width: 60%; /* Adjust the size as needed */
+            max-width: 40%; /* Adjust the size as needed */
             height: auto;
             display: block;
             margin: 20px auto; /* Center the image */
+        }
+
+        /* Positioning for bottom left and bottom right */
+        .bottom-left {
+            position: absolute;
+            bottom: 20px;
+            left: 35px;
+            z-index: 2; /* Ensure it's above the video background */
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2; /* Ensure it's above the video background */
+        }
+
+        /* Additional styling for text box */
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Pink text styling */
+        .pink-text {
+            color: pink;
         }
     </style>
 </head>
@@ -100,7 +128,7 @@
     <div class="bottom-left">
         <img src="200.gif" alt="Jan 16th, 2024">
         <div class="text-box">
-            <p class="pink-text">This is some additional text next to the GIF.</p>
+            <p class="pink-text">meep</p>
         </div>
     </div>
     <div class="bottom-right">
@@ -111,5 +139,3 @@
     </div>
 </body>
 </html>
-
-
