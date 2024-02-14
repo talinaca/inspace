@@ -34,8 +34,10 @@
         }
 
         .content {
-            position: relative;
-            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
             color: white;
             padding: 20px;
@@ -48,6 +50,10 @@
 
         p {
             font-size: 1.2em;
+        }
+
+        .pink-text {
+            color: pink; /* Set text color to pink */
         }
     </style>
 </head>
