@@ -9,7 +9,6 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
         }
 
         .background {
@@ -46,35 +45,16 @@
         /* Neon text effect */
         h1.neon-title {
             font-size: 2em;
-            margin-top: 0; /* Add margin-top to prevent cropping */
-            background: linear-gradient(90deg, #f6ff00, #d400ff, #00ffdb);
-            background-size: 200%;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            animation: glowing 2s linear infinite;
-        }
-
-        /* Fallback color for browsers that don't support neon effect */
-        h1.neon-title {
-            color: #fff; /* White color as fallback */
-        }
-
-        @keyframes glowing {
-            0% {
-                background-position: 0%;
-            }
-            100% {
-                background-position: 200%;
-            }
+            margin-top: 0;
+            color: #fff; /* Fallback color */
         }
 
         /* Adjust image size */
         img {
-            max-width: 80%; /* Set maximum width to 80% of the container */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Ensure image is centered */
-            margin: 20px auto; /* Center the image horizontally with margin */
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
         }
     </style>
 </head>
@@ -89,12 +69,6 @@
         <h1 class="neon-title">Welcome to inspace!</h1>
         <p>hi this is a page dedicated to moments where my girlfriend and i were in space. "but you're not in space?" maybe not to you, but to us these moments were driven by forces that keep balance in the universe. so actually, you should be thanking us for being such cosmic explorers. not to worry though, these forces will never cease to exist for our love is eternal ❤️ </p>
         <img src="IMG_2551.jpg" alt="March 4th, 2023">
-        <audio controls autoplay>
-            <source src="never-gonna-let-you-go.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <img src="200.gif" alt="Jan 16th, 2024">
-        <p class="pink-text">meep</p>
     </div>
 </body>
 </html>
