@@ -46,6 +46,7 @@
         /* Additional styling for content */
         h1 {
             font-size: 2em;
+            margin-top: 0; /* Add margin-top to prevent cropping */
         }
 
         p {
@@ -54,6 +55,14 @@
 
         .pink-text {
             color: pink; /* Set text color to pink */
+        }
+
+        /* Adjust image size */
+        img {
+            max-width: 80%; /* Set maximum width to 80% of the container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure image is centered */
+            margin: 0 auto; /* Center the image horizontally */
         }
     </style>
 </head>
@@ -77,4 +86,3 @@
     </div>
 </body>
 </html>
-
