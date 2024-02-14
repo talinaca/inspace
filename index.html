@@ -45,6 +45,20 @@
             font-size: 2em;
             margin-top: 0;
             color: #fff; /* Fallback color */
+            background: linear-gradient(90deg, #f6ff00, #d400ff, #00ffdb);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: glowing 2s linear infinite;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 200%;
+            }
         }
 
         /* Adjust image size */
@@ -103,7 +117,7 @@
     <div class="bottom-left">
         <img src="200.gif" alt="Jan 16th, 2024">
         <div class="text-box">
-            <p class="pink-text">meep</p>
+            <p class="pink-text">This is some additional text next to the GIF.</p>
         </div>
     </div>
     <div class="bottom-right">
@@ -114,4 +128,3 @@
     </div>
 </body>
 </html>
-
