@@ -55,6 +55,11 @@
             animation: glowing 2s linear infinite;
         }
 
+        /* Fallback color for browsers that don't support neon effect */
+        h1.neon-title {
+            color: #fff; /* White color as fallback */
+        }
+
         @keyframes glowing {
             0% {
                 background-position: 0%;
@@ -93,3 +98,4 @@
     </div>
 </body>
 </html>
+
