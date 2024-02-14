@@ -10,7 +10,6 @@
             padding: 0;
             height: 100%;
             font-family: 'Courier New', Courier, monospace; /* Set the font to a typewriter font */
-}
         }
 
         .background {
@@ -113,6 +112,83 @@
         .pink-text {
             color: pink;
         }
+
+        /* Cassette player styles */
+        .cassette-player {
+            width: 200px;
+            height: 120px;
+            background: linear-gradient(45deg, #111 49%, #777 50%, #111 51%);
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            position: relative;
+        }
+
+        .cassette-player::before,
+        .cassette-player::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 10px;
+            background: #999;
+            border-radius: 10px;
+            top: 10px;
+        }
+
+        .cassette-player::before {
+            left: 10px;
+        }
+
+        .cassette-player::after {
+            right: 10px;
+        }
+
+        .cassette-tape {
+            width: 40px;
+            height: 40px;
+            background: #bbb;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(90deg);
+            border-radius: 5px;
+            box-shadow: inset -2px -2px 0 rgba(255, 255, 255, 0.3), inset 2px 2px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .cassette-tape::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #999;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .cassette-tape::after {
+            content: "";
+            width: 40px;
+            height: 5px;
+            background: #222;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cassette-player .tape-label {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+        }
+
+        .cassette-player .tape-label span {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -128,7 +204,12 @@
         <img src="IMG_2551.jpg" alt="Jan 16th, 2024" class="center-image">
     </div>
     <div class="bottom-left">
-        <img src="200.gif" alt="Jan 16th, 2024">
+        <div class="cassette-player">
+            <div class="cassette-tape"></div>
+            <div class="tape-label">
+                <span>200.gif</span>
+            </div>
+        </div>
         <div class="text-box">
             <p class="pink-text">meep</p>
         </div>
