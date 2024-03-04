@@ -112,6 +112,14 @@
         .pink-text {
             color: pink;
         }
+
+        /* Positioning for additional image on the right */
+        .additional-image {
+            position: fixed;
+            bottom: 20px; /* Adjust vertical position as needed */
+            right: 120px; /* Adjust horizontal position as needed */
+            z-index: 2; /* Ensure it's above the video background */
+        }
     </style>
 </head>
 <body>
@@ -137,6 +145,10 @@
             <source src="never-gonna-let-you-go.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+    </div>
+    <!-- Additional image on the right -->
+    <div class="additional-image">
+        <img src="your_additional_image.jpg" alt="Additional Image">
     </div>
 </body>
 </html>
