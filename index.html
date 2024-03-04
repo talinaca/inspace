@@ -1,4 +1,4 @@
-CTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,6 @@ CTYPE html>
             padding: 0;
             height: 100%;
             font-family: 'Courier New', Courier, monospace; /* Set the font to a typewriter font */
-}
         }
 
         .background {
@@ -95,9 +94,9 @@ CTYPE html>
         }
 
         .bottom-right {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
+            position: fixed; /* Fix the audio player to the bottom */
+            bottom: 20px; /* Adjust vertical position as needed */
+            right: 20px; /* Adjust horizontal position as needed */
             z-index: 2; /* Ensure it's above the video background */
         }
 
