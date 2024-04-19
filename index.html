@@ -119,18 +119,16 @@
             bottom: 180px; /* Adjust vertical position as needed */
             right: 40px; /* Adjust horizontal position as needed */
             z-index: 2; /* Ensure it's above the video background */
-            max-width: 2400px; /* Limit the maximum width */
-            max-height: 2000px; /* Limit the maximum height */
+            max-width: 400px; /* Limit the maximum width */
+            height: auto; /* Let the height adjust accordingly */
             transform: rotate(90deg); /* Rotate the image 90 degrees clockwise */
         }
 
         /* Ensure the image remains visible */
         .additional-image img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: auto;
+            position: static; /* Make the image's position static to keep it visible */
+            width: 100%; /* Make sure the image takes up the full width */
+            height: auto; /* Let the height adjust accordingly */
         }
     </style>
 </head>
