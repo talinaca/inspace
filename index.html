@@ -136,10 +136,16 @@
         .below-additional-image {
             max-width: 100%;
             height: auto;
+            width: auto;
             position: absolute; /* Ensure the GIF stays in place while scrolling */
             bottom: -60px; /* Adjust vertical position as needed */
             right: 100px; /* Adjust horizontal position as needed */
             z-index: 2; /* Ensure it's above the video background */
+         }
+    .below-additional-image img {
+        width: 100%; /* Ensure the width fills its container */
+        height: auto; /* Allow the height to adjust accordingly */
+        object-fit: contain; /* Ensure the aspect ratio is maintained */
         }
     </style>
 </head>
