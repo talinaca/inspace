@@ -1,130 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>for andrea</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Courier New', Courier, monospace; /* Set the font to a typewriter font */
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for andrea</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Courier New', Courier, monospace; /* Set the font to a typewriter font */
+    }
 
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: -1;
-    }
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
 
-    #video-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -1;
-    }
+    #video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
 
-    .content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
 
-    /* Neon text effect */
-    h1.neon-title {
-      font-size: 1.5em; /* Adjust font size for better readability on iPhone */
-      margin-top: 0;
-      color: #fff; /* Fallback color */
-      background: linear-gradient(90deg, #ff80ed, #ffadad, #ffcc5c);
-      background-size: 200%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: glowing 2s linear infinite;
-    }
+    /* Neon text effect */
+    h1.neon-title {
+      font-size: 2em;
+      margin-top: 0;
+      color: #fff; /* Fallback color */
+      background: linear-gradient(90deg, #ff80ed, #ffadad, #ffcc5c);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: glowing 2s linear infinite;
+    }
 
-    /* Vendor prefixes for animation */
-    @-webkit-keyframes glowing {
-      0% {
-        background-position: 0%;
-      }
-      100% {
-        background-position: 200%;
-      }
-    }
+    /* Vendor prefixes for animation */
+    @-webkit-keyframes glowing {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 200%;
+      }
+    }
 
-    @keyframes glowing {
-      0% {
-        background-position: 0%;
-      }
-      100% {
-        background-position: 200%;
-      }
-    }
+    @keyframes glowing {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 200%;
+      }
+    }
 
-    /* Fallback neon style */
-    h1.neon-title {
-      text-shadow: 0 0 5px #f6ff00, 0 0 10px #d400ff, 0 0 15px #00ffdb;
-    }
+    /* Fallback neon style */
+    h1.neon-title {
+      text-shadow: 0 0 5px #f6ff00, 0 0 10px #d400ff, 0 0 15px #00ffdb;
+    }
 
-    /* Smaller center image with max-width for responsiveness */
-    img.center-image {
-      max-width: 60%; /* Adjust as needed */
-      height: auto;
-      display: block;
-      margin: 20px auto; /* Center the image */
-    }
+    /* Smaller center image */
+    img.center-image {
+      max-width: 40%; /* Adjust the size as needed */
+      height: auto;
+      display: block;
+      margin: 20px auto; /* Center the image */
+    }
 
-    /* Responsive positioning for bottom elements */
-    .bottom-left,
-    .bottom-right,
-    .additional-image {
-      position: fixed;
-      bottom: 10px; /* Adjust vertical position as needed */
-    }
+    /* Positioning for bottom left and bottom right */
+    .bottom-left {
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      z-index: 2; /* Ensure it's above the video background */
+    }
 
-    .bottom-left {
-      left: 20px;
-      z-index: 2; /* Ensure it's above the video background */
-    }
+    .bottom-right {
+      position: fixed; /* Fix the audio player to the bottom */
+      bottom: 20px; /* Adjust vertical position as needed */
+      right: 20px; /* Adjust horizontal position as needed */
+      z-index: 2; /* Ensure it's above the video background */
+    }
 
-    .bottom-right {
-      right: 20px;
-      z-index: 2; /* Ensure it's above the video background */
-    }
+    /* Additional styling for text box */
+    .text-box {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
 
-    /* Additional styling for text box */
-    .text-box {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-    }
+    /* Pink text styling */
+    .pink-text {
+      color: pink;
+    }
 
-    /* Pink text styling */
-    .pink-text {
-      color: pink;
-    }
-
-    /* Responsive image sizing for additional image */
-    .additional-image {
-      width: 200px;
-      height: 150px; /* Adjust as needed based on image dimensions */
-      transform: rotate(90deg); /*Rotate the image 90 degrees clockwise*/
-    }
-  </style>
+    /* Positioning for additional image on the right */
+    .additional-image {
+      position: fixed;
+      bottom: 180px; /* Adjust vertical position as needed */
+      right: 40px; /* Adjust horizontal position as needed */
+      z-index: 2; /* Ensure it's above the video background */
+      max-width: 2400px; /* Limit the maximum width */
+      max-height: 2000px; /*Limit the maximum height*/
+      transform: rotate(90deg); /*Rotate the image 90 degrees clockwise*/
+    }
+  </style>
 </head>
 <body>
-  <div class="background">
-    <video id="video-bg" autoplay muted loop>
-      <source src="https://talinaca
+  <div class="background">
+    <video id="video-bg" autoplay muted loop>
+      <source src="https://talinaca.github.io/inspace/MeteordateAHH.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="content">
+    <h1 class="neon-title">Welcome to inspace!</h1>
+    <p>hi this is a page dedicated to moments where my girlfriend and i were in space. "but you're not in space?" maybe not to you, but to us these moments were driven by forces that keep balance in the universe. so actually, you should be thanking us for being such cosmic explorers. not to worry though, these forces will never cease to exist for our love is eternal ❤️ </p>
+    <img src="IMG_2551.jpg" alt="Jan 16th, 2024" class="center-image">
+  </div>
+  <div class="bottom-left">
+    <img src="200.gif" alt="Jan 16th, 2024">
+    <div class="text-box">
+      <p class="pink-text">meep</p>
+    </div>
+  </div>
+  <div class="bottom-right">
+    <audio controls autoplay>
+      <source src="never-gonna-let-you-go.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <!-- Additional image on the right -->
+  <div class="additional-image">
+    <img src="IMG_1310_25.jpg" alt="Road Trip To Dallas" width="400" height="300">
+  </div>
+</body>
+</html>
