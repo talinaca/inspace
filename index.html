@@ -134,10 +134,10 @@
 
         /* Style for the new image beneath the additional image */
         .beneath-additional-image {
-            max-width: 400px; /* Adjust the maximum width of the image */
-            height: auto; /* Allow the height to adjust accordingly */
-            display: block; /* Ensure the image behaves as a block element */
-            margin-top: 20px; /* Add some margin to separate from the additional image */
+            position: absolute; /* Ensure the image stays in place */
+            bottom: 20px; /* Adjust vertical position */
+            right: 40px; /* Adjust horizontal position */
+            z-index: 2; /* Ensure it's above other elements */
         }
     </style>
 </head>
@@ -173,7 +173,7 @@
     </div>
     <!-- New image beneath the additional image -->
     <div class="beneath-additional-image">
-        <img src="kissy.gif" alt="peru" width="400" height="300">
+        <img src="kissy.gif" alt="kissy" width="400" height="300">
     </div>
 </body>
 </html>
