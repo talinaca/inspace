@@ -146,6 +146,8 @@
         width: 88%; /* Ensure the width fills its container */
         height: auto; /* Allow the height to adjust accordingly */
         object-fit: contain; /* Ensure the aspect ratio is maintained */
+         -webkit-backface-visibility: hidden; /* Disable hardware acceleration */
+    backface-visibility: hidden; /* Disable hardware acceleration */
         }
     </style>
 </head>
