@@ -131,6 +131,14 @@
             display: block; /* Ensure the image behaves as a block element */
             margin-top: 10px; /* Add some margin to separate from the GIF */
         }
+
+        /* Style for the GIF beneath the additional image */
+        .below-additional-image {
+            position: absolute; /* Ensure the GIF stays in place while scrolling */
+            bottom: 100px; /* Adjust vertical position as needed */
+            right: 100px; /* Adjust horizontal position as needed */
+            z-index: 2; /* Ensure it's above the video background */
+        }
     </style>
 </head>
 <body>
@@ -162,6 +170,10 @@
     <!-- Additional image on the right -->
     <div class="additional-image">
         <img src="IMG_1310_25.jpg" alt="Road Trip To Dallas" width="400" height="300">
+    </div>
+    <!-- GIF beneath the additional image -->
+    <div class="below-additional-image">
+        <img src="your-gif.gif" alt="Your GIF" width="200" height="150">
     </div>
 </body>
 </html>
