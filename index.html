@@ -88,7 +88,7 @@
         /* Positioning for bottom left and bottom right */
         .bottom-left {
             position: absolute;
-            bottom: -125px;
+            bottom: 245px;
             left: 40px;
             z-index: 2; /* Ensure it's above the video background */
         }
@@ -126,10 +126,18 @@
 
         /* Style for the new image below the GIF */
         .below-gif {
-            max-width: 300px; /* Adjust the maximum width of the image */
+            max-width: 200px; /* Adjust the maximum width of the image */
             height: auto; /* Allow the height to adjust accordingly */
             display: block; /* Ensure the image behaves as a block element */
             margin-top: 10px; /* Add some margin to separate from the GIF */
+        }
+
+        /* Style for the new image beneath the additional image */
+        .beneath-additional-image {
+            max-width: 400px; /* Adjust the maximum width of the image */
+            height: auto; /* Allow the height to adjust accordingly */
+            display: block; /* Ensure the image behaves as a block element */
+            margin-top: 20px; /* Add some margin to separate from the additional image */
         }
     </style>
 </head>
@@ -162,6 +170,10 @@
     <!-- Additional image on the right -->
     <div class="additional-image">
         <img src="IMG_1310_25.jpg" alt="Road Trip To Dallas" width="400" height="300">
+    </div>
+    <!-- New image beneath the additional image -->
+    <div class="beneath-additional-image">
+        <img src="kissy.gif" alt="peru" width="400" height="300">
     </div>
 </body>
 </html>
